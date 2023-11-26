@@ -1,8 +1,21 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import { PiUserCirclePlusFill } from "react-icons/pi";
 import { ROUTES } from '../utils/routes';
+import {loadData} from '../utils/localStorage'
 
 const Generator = ({setPage}) => {
+    const [jd,setJd] = useState("");
+
+    useEffect(()=>{
+        const fetchedJD = async() =>{
+            const fetchedJd = await loadData("jd")
+            setJd(fetchedJd);
+        }
+        fetchedJD();
+        
+    },[])
+
+
   return (
     <header>
         <div className='flex flex-col '>
@@ -23,6 +36,7 @@ const Generator = ({setPage}) => {
                     rows={12}
                     className='w-full my-3'
                     placeholder='Generated Customized Cover Letter'
+                    value={jd}
                 />
             </div>
 
