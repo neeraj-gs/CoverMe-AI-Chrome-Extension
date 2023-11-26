@@ -1,4 +1,5 @@
 import React from 'react'
+import { FaArrowCircleLeft } from "react-icons/fa";
 
 const Profile = () => {
   return (
@@ -6,7 +7,9 @@ const Profile = () => {
         {/* Headers section for the profile a */}
         <div className='flex flex-row justify-between my-4 items-center'>
             <h2 className='text-2xl font-extrabold'>Profile</h2>
-            <button className='rounded-full border-2 border-b-2 border-r-2 border-black px-4 py-3 text-lg font-bold transition-all hover:translate-y-[2px] hover:bg-slate-200'>Back Button</button>
+            <button className='rounded-full border-2 border-b-2 border-r-2 border-black px-4 py-4 text-xl font-bold transition-all hover:translate-y-[2px] hover:bg-slate-200'>
+                <FaArrowCircleLeft />
+            </button>
         </div>
 
 
@@ -24,7 +27,7 @@ const Profile = () => {
             name="openAIKey"
             type="text"
             className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-            placeholder="sk-...1234"
+            placeholder="Paste in your api key here"
             required
           />
         </div>
@@ -44,12 +47,7 @@ const Profile = () => {
           ></textarea>
         </div>
         <div className="mb-6 text-center">
-          <button
-            type="submit"
-            className="border-2 border-solid border-black text-black text-lg rounded-md px-5 py-2 hover:text-white hover:bg-slate-50"
-          >
-            Save
-          </button>
+        <button type='submit' className='rounded-full border-2 border-b-2 border-r-2 border-black px-4 py-3 text-lg font-bold transition-all hover:translate-y-[2px] hover:bg-slate-200'>Save</button>
         </div>
       </form>
 
