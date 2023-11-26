@@ -4,15 +4,14 @@ import { ROUTES } from '../utils/routes';
 import {loadData} from '../utils/localStorage'
 
 const Generator = ({setPage}) => {
-    const [jd,setJd] = useState("");
+    const [jobDescription,setJobDescription] = useState("");
 
     useEffect(()=>{
-        const fetchedJD = async() =>{
-            const fetchedJd = await loadData("jd")
-            setJd(fetchedJd);
+        const fetchedJobDescription = async() =>{
+            const fetchedJd = await loadData("jobDescription")
+            setJobDescription(fetchedJd);
         }
-        fetchedJD();
-        
+        fetchedJobDescription();
     },[])
 
 
@@ -36,7 +35,7 @@ const Generator = ({setPage}) => {
                     rows={12}
                     className='w-full my-3'
                     placeholder='Generated Customized Cover Letter'
-                    value={jd}
+                    value={jobDescription}
                 />
             </div>
 
