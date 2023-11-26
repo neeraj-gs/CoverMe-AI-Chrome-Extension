@@ -1,13 +1,14 @@
 import React from 'react'
 import { FaArrowCircleLeft } from "react-icons/fa";
+import { ROUTES } from '../utils/routes';
 
-const Profile = () => {
+const Profile = ({setPage}) => {
   return (
     <div className='flex flex-col mx-5'>
         {/* Headers section for the profile a */}
         <div className='flex flex-row justify-between my-4 items-center'>
             <h2 className='text-2xl font-extrabold'>Profile</h2>
-            <button className='rounded-full border-2 border-b-2 border-r-2 border-black px-4 py-4 text-xl font-bold transition-all hover:translate-y-[2px] hover:bg-slate-200'>
+            <button onClick={()=> {setPage(ROUTES.GENERATOR)}} className='rounded-full border-2 border-b-2 border-r-2 border-black px-4 py-4 text-xl font-bold transition-all hover:translate-y-[2px] hover:bg-slate-200'>
                 <FaArrowCircleLeft />
             </button>
         </div>

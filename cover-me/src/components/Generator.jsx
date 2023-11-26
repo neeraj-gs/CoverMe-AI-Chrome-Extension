@@ -1,7 +1,8 @@
 import React from 'react'
 import { PiUserCirclePlusFill } from "react-icons/pi";
+import { ROUTES } from '../utils/routes';
 
-const Generator = () => {
+const Generator = ({setPage}) => {
   return (
     <header>
         <div className='flex flex-col '>
@@ -11,7 +12,7 @@ const Generator = () => {
             <div className='flex flex-row justify-between mx-5 my-5 items-center'>
                 <button className='rounded-full border-2 border-b-2 border-r-2 border-black px-4 py-3 text-lg font-bold transition-all hover:translate-y-[2px] hover:bg-slate-200'>Generate</button>
                 <h2 className='text-2xl font-extrabold underline'>CoverMe: Linkedin</h2>
-                <button className='rounded-full border-2 border-b-2 border-r-2 border-black px-2 py-2 text-2xl font-bold transition-all hover:translate-y-[2px] hover:bg-slate-200'>
+                <button onClick={()=> {setPage(ROUTES.PROFILE)}} className='rounded-full border-2 border-b-2 border-r-2 border-black px-2 py-2 text-2xl font-bold transition-all hover:translate-y-[2px] hover:bg-slate-200'>
                     <PiUserCirclePlusFill />
                 </button>
             </div>
