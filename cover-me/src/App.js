@@ -1,8 +1,11 @@
 import React from 'react';
+import Generator from './components/Generator';
 
 function App() {
   return (
-    <div>Hii</div>
+    <main>
+      <Generator />
+    </main>
   );
 }
 
