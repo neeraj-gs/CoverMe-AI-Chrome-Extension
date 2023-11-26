@@ -18,6 +18,7 @@ function App() {
       setResume(fetchedResume)
       setOpenAIKey(fetchedAIKey) //
     }
+    fetchLocalData();
     
   },[])
 
