@@ -1,8 +1,11 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Generator from './components/Generator';
 import Profile from './components/Profile';
 
 function App() {
+
+  const [page,setPage] = useState();
+
   return (
     <main>
       <Generator />
