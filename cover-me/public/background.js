@@ -3,7 +3,7 @@
 
 //the chomr variavble gives access to tabs , that allwos to listen for events
 
-
+console.log("Bg running")
 // Declaring constants to store LinkedIn URLs.
 //diffrent urls to cehck and scrape it
 const linkedInListViewURL = "https://www.linkedin.com/jobs/collections"; //list og jobs
@@ -22,12 +22,14 @@ function grabJobDescription(className) {
   const jobDetailsContainer = document.body.querySelector(`.${className}`);
   const jobDetails = jobDetailsContainer.textContent; //there are a lot of white rsapces so we need to trim them
   const cleanedJobDetails = jobDetails.replace(/\s\s+/g, " ");
+  console.log(cleanedJobDetails);
   return cleanedJobDetails; //get teh actual job details
 }
 
 // This is an event listener that runs when a tab is updated in Chrome.
 //evern  litsetnterr when we cahgne between tabs , 
 chrome.tabs.onUpdated.addListener(function (tabId, changeInfo, tab) {
+    console.log("Event Triggered")
   // Check if the tab is fully loaded and active.
   if (changeInfo.status === "complete" && tab.active) {
     // Check if the URL of the tab matches the LinkedIn list or detail view URL.
