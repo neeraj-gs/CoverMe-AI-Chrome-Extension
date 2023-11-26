@@ -1,6 +1,7 @@
 import React from 'react'
 import { FaArrowCircleLeft } from "react-icons/fa";
 import { ROUTES } from '../utils/routes';
+import { saveData } from '../utils/localStorage';
 
 const Profile = ({setPage,resume,setResume,openAIKey,setOpenAIKey}) => {
 
@@ -11,6 +12,8 @@ const Profile = ({setPage,resume,setResume,openAIKey,setOpenAIKey}) => {
         const updatedOpenAIKey = formData.get("openAIKey");
         setResume(updatedResume)
         setOpenAIKey(updatedOpenAIKey);
+        saveData('resume', updatedResume)
+        saveData('openAIKey', updatedOpenAIKey)
     }
 
   return (
