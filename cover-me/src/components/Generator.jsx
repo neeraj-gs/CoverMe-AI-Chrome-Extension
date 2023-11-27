@@ -45,7 +45,7 @@ const Generator = ({setPage,resume,openAIKey}) => {
             
             {/* First ROw for the Header  */}
             <div className='flex flex-row justify-between mx-5 my-5 items-center'>
-                <button onClick={generateCoverLetter} className='rounded-full border-2 border-b-2 border-r-2 border-black px-4 py-3 text-lg font-bold transition-all hover:translate-y-[2px] hover:bg-slate-200'>
+                <button onClick={()=>generateCoverLetter()} className='rounded-full border-2 border-b-2 border-r-2 border-black px-4 py-3 text-lg font-bold transition-all hover:translate-y-[2px] hover:bg-slate-200'>
                     {isLoading ? "Generating..":"Generate"}
                 </button>
                 <h2 className='text-2xl font-extrabold underline'>CoverMe: Linkedin</h2>
