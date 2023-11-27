@@ -3,8 +3,10 @@ import { PiUserCirclePlusFill } from "react-icons/pi";
 import { ROUTES } from '../utils/routes';
 import {loadData} from '../utils/localStorage'
 
-const Generator = ({setPage}) => {
+const Generator = ({setPage,resume,openAIKey}) => {
     const [jobDescription,setJobDescription] = useState("");
+    const [coverLetter,setCoverLetter] = useState("");
+
 
     useEffect(()=>{
         const fetchedJobDescription = async() =>{
@@ -12,7 +14,21 @@ const Generator = ({setPage}) => {
             setJobDescription(fetchedJd);
         }
         fetchedJobDescription();
-    },[])
+    },[]);
+
+
+    const generateCoverLetter = async()=>{
+        try {
+            // Create message to send to chatGPT API
+            const message = `Generate a cover letter based on the following resume and job description:\n\nRESUME:\n${resume}\n\nJob Description:\n${jobDescription}`;
+            // Send message to chatGPT API and wait for response
+            const chatGPTResponse = await postChatGPTMessage(message, openAIKey);
+            // Update state with generated cover letter
+            setCoverLetter(chatGPTResponse);
+        } catch (error) {
+            console.log(error)
+        }
+    }
 
 
   return (
