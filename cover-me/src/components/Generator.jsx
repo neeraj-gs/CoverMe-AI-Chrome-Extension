@@ -5,6 +5,9 @@ import {loadData} from '../utils/localStorage'
 import { postChatGPTMessage } from '../utils/chatGPTUtil';
 
 const Generator = ({setPage,resume,openAIKey}) => {
+
+    const [isLoading,setIsLoading] = useState(false)
+
     const [jobDescription,setJobDescription] = useState("");
     const [coverLetter,setCoverLetter] = useState("");
 
@@ -19,6 +22,7 @@ const Generator = ({setPage,resume,openAIKey}) => {
 
 
     const generateCoverLetter = async()=>{
+        setIsLoading(true)
         try {
             // Create message to send to chatGPT API
             const message = `Generate a cover letter based on the following resume and job description:\n\nRESUME:\n${resume}\n\nJob Description:\n${jobDescription}`;
@@ -28,6 +32,8 @@ const Generator = ({setPage,resume,openAIKey}) => {
             setCoverLetter(chatGPTResponse);
         } catch (error) {
             console.log(error)
+        } finally{
+            setIsLoading(false)
         }
     }
 
@@ -39,7 +45,9 @@ const Generator = ({setPage,resume,openAIKey}) => {
             
             {/* First ROw for the Header  */}
             <div className='flex flex-row justify-between mx-5 my-5 items-center'>
-                <button onClick={generateCoverLetter} className='rounded-full border-2 border-b-2 border-r-2 border-black px-4 py-3 text-lg font-bold transition-all hover:translate-y-[2px] hover:bg-slate-200'>Generate</button>
+                <button onClick={generateCoverLetter} className='rounded-full border-2 border-b-2 border-r-2 border-black px-4 py-3 text-lg font-bold transition-all hover:translate-y-[2px] hover:bg-slate-200'>
+                    {isLoading ? "Generating..":"Generate"}
+                </button>
                 <h2 className='text-2xl font-extrabold underline'>CoverMe: Linkedin</h2>
                 <button onClick={()=> {setPage(ROUTES.PROFILE)}} className='rounded-full border-2 border-b-2 border-r-2 border-black px-2 py-2 text-2xl font-bold transition-all hover:translate-y-[2px] hover:bg-slate-200'>
                     <PiUserCirclePlusFill />
