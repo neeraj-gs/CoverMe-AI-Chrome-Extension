@@ -17,20 +17,20 @@ function App() {
 
       setResume(fetchedResume)
       setOpenAIKey(fetchedAIKey) //
-    }
+    } 
     fetchLocalData();
     
   },[])
 
   switch (page){
     case ROUTES.GENERATOR:
-      return <Generator setPage={setPage} resume={resume} setResume={setResume}/>;
+      return <Generator setPage={setPage} resume={resume}  openAIKey={openAIKey}/>;
 
     case ROUTES.PROFILE:
       return <Profile setPage={setPage} resume={resume} setResume={setResume} openAIKey={openAIKey} setOpenAIKey={setOpenAIKey} />;
 
       default:
-        return <Generator setPage={setPage} resume={resume} setResume={setResume}/>;
+        return <Generator setPage={setPage} resume={resume}  openAIKey={openAIKey}/>;
   }
 
 }
