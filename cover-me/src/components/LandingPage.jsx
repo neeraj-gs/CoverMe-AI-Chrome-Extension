@@ -14,7 +14,7 @@ const LandingPage = ({setPage}) => {
                     <PiUserCirclePlusFill />
                 </button>
         </nav>
-        <div className='ml-14 flex flex-col items-center w-3/4 mt-32'>
+        <div className='ml-14 flex flex-col items-center w-3/4 mt-24'>
         <h1 className='text-2xl text-center'>
           Generate Customized Cover Letter From Our  
           <span className='text-green-600 font-bold'> Personal AI</span> and Increased chances of getting shortlisted
