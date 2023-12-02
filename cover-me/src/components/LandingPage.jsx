@@ -1,6 +1,7 @@
 import React from 'react'
 import { PiUserCirclePlusFill } from 'react-icons/pi'
 import { ROUTES } from '../utils/routes'
+import TypeWriterTitle from './TypeWriter'
 
 const LandingPage = ({setPage}) => {
   return (
@@ -13,6 +14,24 @@ const LandingPage = ({setPage}) => {
                     <PiUserCirclePlusFill />
                 </button>
         </nav>
+        <div className='ml-14 flex flex-col items-center w-3/4 mt-56'>
+        <h1 className='text-2xl text-center'>
+          Generate Customized Cover Letter From Our  
+          <span className='text-green-600 font-bold'> Personal AI</span> and Increased chances of getting shortlisted
+        </h1>
+        <div className="mt-6"></div>
+
+        {/* //typewriter */}
+        <h3 className='font-semibold text-lg text-center text-slate-700'>
+          <TypeWriterTitle />
+        </h3>
+        <div className="mt-12"></div>
+        <button onClick={()=> {setPage(ROUTES.PROFILE)}} className='rounded-full border-2 border-b-4 border-r-4 border-black p-3 text-lg bg-green-300 mr-5 font-bold transition-all hover:translate-y-[2px] hover:bg-green-400 shadow-sm shadow-black'>
+                    Get Started
+                </button>
+
+
+      </div>
     </main>
   )
 }
