@@ -44,21 +44,21 @@ const Generator = ({setPage,resume,openAIKey}) => {
             
             
             {/* First ROw for the Header  */}
-            <div className='flex flex-row justify-between mx-5 my-5 items-center'>
-                <button onClick={()=>generateCoverLetter()} className='rounded-full border-2 border-b-2 border-r-2 border-black px-4 py-3 text-lg font-bold transition-all hover:translate-y-[2px] hover:bg-slate-200'>
+            <div className='flex flex-row justify-between mx-5 my-5 items-center shadow-md shadow-slate-200'>
+                <button onClick={()=>generateCoverLetter()} className='rounded-full border-2 border-b-2 border-r-2 border-black px-4 py-3 text-md font-serif font-bold transition-all hover:translate-y-[2px] hover:bg-slate-200 shadow-sm shadow-black'>
                     {isLoading ? "Generating..":"Generate"}
                 </button>
-                <h2 className='text-2xl font-extrabold underline'>CoverMe: Linkedin</h2>
-                <button onClick={()=> {setPage(ROUTES.PROFILE)}} className='rounded-full border-2 border-b-2 border-r-2 border-black px-2 py-2 text-2xl font-bold transition-all hover:translate-y-[2px] hover:bg-slate-200'>
+                <h2 className='text-2xl font-extrabold font-serif text-blue-950 underline'>CoverMe: Linkedin</h2>
+                <button onClick={()=> {setPage(ROUTES.PROFILE)}} className='rounded-full border-2 border-b-2 border-r-2 border-black px-2 py-2 text-2xl font-bold transition-all hover:translate-y-[2px] hover:bg-slate-200 shadow-sm shadow-black'>
                     <PiUserCirclePlusFill />
                 </button>
             </div>
 
             {/* Second row where we get the generated cover letter */}
-            <div className='flex mx-5'>
+            <div className='flex mx-5 outline-none border-0'>
                 <textarea
-                    rows={12}
-                    className='w-full my-3'
+                    rows={10}
+                    className='w-full my-3 border-slate-300'
                     placeholder='Generated Customized Cover Letter'
                     value={coverLetter}
                 />
