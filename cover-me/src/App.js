@@ -3,6 +3,7 @@ import Generator from './components/Generator';
 import Profile from './components/Profile';
 import { ROUTES } from './utils/routes';
 import { loadData } from './utils/localStorage';
+import LandingPage from './components/LandingPage';
 
 function App() {
 
@@ -30,7 +31,7 @@ function App() {
       return <Profile setPage={setPage} resume={resume} setResume={setResume} openAIKey={openAIKey} setOpenAIKey={setOpenAIKey} />;
 
       default:
-        return <Generator setPage={setPage} resume={resume}  openAIKey={openAIKey}/>;
+        return <LandingPage />
   }
 
 }
