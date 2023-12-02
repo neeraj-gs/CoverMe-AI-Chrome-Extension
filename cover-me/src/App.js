@@ -31,7 +31,7 @@ function App() {
       return <Profile setPage={setPage} resume={resume} setResume={setResume} openAIKey={openAIKey} setOpenAIKey={setOpenAIKey} />;
 
       default:
-        return <LandingPage />
+        return <LandingPage setPage={setPage} />
   }
 
 }
