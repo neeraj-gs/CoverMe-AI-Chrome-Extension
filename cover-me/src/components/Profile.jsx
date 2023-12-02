@@ -18,7 +18,7 @@ const Profile = ({setPage,resume,setResume,openAIKey,setOpenAIKey}) => {
     }
 
   return (
-    <div className='flex flex-col mx-5'>
+    <div className='flex flex-col mx-5 '>
         {/* Headers section for the profile a */}
         <div className='flex flex-row justify-between my-4 items-center'>
             <h2 className='text-3xl font-extrabold font-serif'>Profile</h2>
