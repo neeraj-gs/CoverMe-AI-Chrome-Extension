@@ -2,6 +2,7 @@ import React from 'react'
 import { FaArrowCircleLeft } from "react-icons/fa";
 import { ROUTES } from '../utils/routes';
 import { saveData } from '../utils/localStorage';
+import { HiHomeModern } from "react-icons/hi2";
 
 const Profile = ({setPage,resume,setResume,openAIKey,setOpenAIKey}) => {
 
@@ -21,9 +22,15 @@ const Profile = ({setPage,resume,setResume,openAIKey,setOpenAIKey}) => {
         {/* Headers section for the profile a */}
         <div className='flex flex-row justify-between my-4 items-center'>
             <h2 className='text-3xl font-extrabold font-serif'>Profile</h2>
+            <div>
+            <button onClick={()=> {setPage(ROUTES.LANDINGPAGE)}} className='rounded-full border-2 border-b-2 border-r-2 border-black px-4 py-4 text-xl font-bold transition-all hover:translate-y-[2px] hover:bg-slate-200 mr-6'>
+                <HiHomeModern />
+            </button>
             <button onClick={()=> {setPage(ROUTES.GENERATOR)}} className='rounded-full border-2 border-b-2 border-r-2 border-black px-4 py-4 text-xl font-bold transition-all hover:translate-y-[2px] hover:bg-slate-200'>
                 <FaArrowCircleLeft />
             </button>
+            </div>
+            
         </div>
 
 
