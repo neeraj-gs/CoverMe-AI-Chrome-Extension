@@ -65,7 +65,7 @@ const Generator = ({setPage,resume,openAIKey}) => {
             </div>
 
             <div className="text-center font-serif font-bold mt-8">
-                <a href="https://github.com/neeraj-gs/Weather-App" target="_blank" rel="noreferrer" className='font-bold text-green-400 text-lg'>
+                <a href="https://github.com/neeraj-gs/CoverMe-AI-Chrome-Extension" target="_blank" rel="noreferrer" className='font-bold text-green-400 text-lg'>
                 Source Code
                 </a>
                 {" "}

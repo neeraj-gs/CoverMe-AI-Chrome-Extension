@@ -25,8 +25,8 @@ const LandingPage = ({setPage}) => {
         <h3 className='font-semibold text-lg text-center text-slate-700'>
           <TypeWriterTitle />
         </h3>
-        <div className="mt-12"></div>
-        <button onClick={()=> {setPage(ROUTES.PROFILE)}} className='rounded-full border-2 border-b-4 border-r-4 border-black p-3 text-lg bg-green-300 mr-5 font-bold transition-all hover:translate-y-[2px] hover:bg-green-400 shadow-sm shadow-black'>
+        <div className="mt-6"></div>
+        <button onClick={()=> {setPage(ROUTES.PROFILE)}} className='rounded-full border-2 border-b-4 border-r-4 border-black p-3 text-lg bg-green-300 mr-5 font-bold transition-all hover:translate-y-[2px] hover:bg-green-400 shadow-sm shadow-black mb-14'>
                     Get Started
                 </button>
 
