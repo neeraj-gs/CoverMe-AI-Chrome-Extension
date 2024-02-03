@@ -18,7 +18,7 @@ const Profile = ({setPage,resume,setResume,openAIKey,setOpenAIKey}) => {
     }
 
   return (
-    <div className='flex flex-col mx-5 '>
+    <div className='flex flex-col p-5 bg-gradient-to-r min-h-[60vh] grainy from-slate-100 to-orange-100'>
         {/* Headers section for the profile a */}
         <div className='flex flex-row justify-between my-4 items-center'>
             <h2 className='text-3xl font-extrabold font-serif'>Profile</h2>
@@ -70,7 +70,7 @@ const Profile = ({setPage,resume,setResume,openAIKey,setOpenAIKey}) => {
           ></textarea>
         </div>
         <div className="mb-6 text-center">
-        <button type='submit' className='rounded-full border-2 border-b-2 border-r-2 border-black px-4 py-3 text-lg font-bold transition-all hover:translate-y-[2px] hover:bg-slate-200 shadow-md shadow-black'>Save</button>
+        <button type='submit' className='rounded-xl mt-8 border-2 border-b-2 border-r-2 border-black px-4 py-3 text-lg font-bold bg-green-400 transition-all hover:translate-y-[2px] hover:bg-slate-200 shadow-md shadow-black'>Save</button>
         </div>
       </form>
 

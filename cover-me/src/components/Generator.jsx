@@ -37,15 +37,13 @@ const Generator = ({setPage,resume,openAIKey}) => {
         }
     }
 
-
+//Genertor compoent where we get the generarted COver letter
   return (
-    <header>
+    <header className='bg-gradient-to-r min-h-[60vh] grainy from-slate-100 to-orange-100'>
         <div className='flex flex-col '>
-            
-            
             {/* First ROw for the Header  */}
-            <div className='flex flex-row justify-between mx-5 my-5 items-center shadow-md shadow-slate-200'>
-                <button onClick={()=>generateCoverLetter()} className='rounded-full border-2 border-b-2 border-r-2 border-black px-4 py-3 text-md font-serif font-bold transition-all hover:translate-y-[2px] hover:bg-slate-200 shadow-sm shadow-black'>
+            <div className='flex flex-row justify-between mx-5 my-5 items-center'>
+                <button onClick={()=>generateCoverLetter()} className='rounded-xl border-2 border-b-2 border-r-2 border-black px-4 py-3 text-md font-serif font-bold transition-all hover:translate-y-[2px] bg-green-400 hover:bg-slate-200 shadow-sm shadow-black'>
                     {isLoading ? "Generating..":"Generate"}
                 </button>
                 <h2 className='text-2xl font-extrabold font-serif text-blue-950 underline'>CoverMe: Linkedin</h2>
@@ -70,7 +68,8 @@ const Generator = ({setPage,resume,openAIKey}) => {
                 </a>
                 {" "}
                 | Created With ❤️️ by Neeraj GS{" "}
-      </div>
+            </div>
+            <hr className='mt-10' />
 
 
 

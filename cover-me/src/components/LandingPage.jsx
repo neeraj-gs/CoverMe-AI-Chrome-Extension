@@ -5,8 +5,8 @@ import TypeWriterTitle from './TypeWriter'
 
 const LandingPage = ({setPage}) => {
   return (
-    <main className="bg-gradient-to-r min-h-[60vh] grainy from-rose-100 to-slate-100">
-        <nav className='flex items-center justify-between shadow-lg shadow-slate-200'>
+    <main className="bg-gradient-to-r min-h-[60vh] grainy from-slate-100 to-orange-100 p-5">
+        <nav className='flex items-center justify-between shadow-lg shadow-green-200'>
             <div className='m-4'>
                 <img src="/icon.png" alt="logo" height={70} width={70} />
             </div>
@@ -26,11 +26,9 @@ const LandingPage = ({setPage}) => {
           <TypeWriterTitle />
         </h3>
         <div className="mt-6"></div>
-        <button onClick={()=> {setPage(ROUTES.PROFILE)}} className='rounded-full border-2 border-b-4 border-r-4 border-black p-3 text-lg bg-green-300 mr-5 font-bold transition-all hover:translate-y-[2px] hover:bg-green-400 shadow-sm shadow-black mb-14'>
+        <button onClick={()=> {setPage(ROUTES.PROFILE)}} className='rounded-xl mt-8 border-2 border-b-4 border-r-4 border-black p-3 text-lg bg-green-300 mx-auto font-bold transition-all hover:translate-y-[2px] hover:bg-green-400 shadow-sm shadow-black'>
                     Get Started
-                </button>
-
-
+        </button>
       </div>
     </main>
   )

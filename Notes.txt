@@ -1,6 +1,8 @@
 Cover Me
     Generate the Cover Letter FOr your jobs using AI 
     A chrome extensio that allows jobs seekers to generate a cover letter and increase the spped fo apllying ot jobs
+    Micro SaaS 
+
     
     I/p:
         Open AI API Key 
@@ -22,7 +24,8 @@ Open AI API Key - Profile loads previously saved keys , geenrator , send api key
 Resume - 
 Cover Letter - ONoly in generator.js 
 Scape Linkedin Page - TO get the Info related to JD 
-    It is used as the background process 
+    It is used as the background process ,A Backgroud Service worker is used 
+    
     
 
 
